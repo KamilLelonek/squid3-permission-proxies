@@ -32,7 +32,7 @@ You can ssh into machine as:
 You can use machine as a proxy:
 
     curl -x 192.168.56.101:3128 http://www.example.com/
-    
+
 ## Authentication
 
 Squid3 uses HTTP basic authentication with the following credentials predefined:
@@ -67,3 +67,9 @@ That won't delete downloaded Ubuntu image. Another useful commands are:
 
 - `vagrant provision` - setup machines once again
 - `vagrant reload` - restart machines and apply new configuration
+
+## Resources:
+
+- http://tecadmin.net/configure-squid-proxy-server-mac-address-based-filtering/
+- http://www.deckle.co.uk/squid-users-guide/squid-access-control-and-access-control-operators.html
+- http://wiki.squid-cache.org/SquidFaq/SquidAcl
