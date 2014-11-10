@@ -44,6 +44,10 @@ Squid3 uses HTTP basic authentication with the following credentials predefined:
 
 You can modify this values in [`credentials.yml`](https://github.com/KamilLelonek/squid3-permission-proxies/blob/master/vars/credentials.yml)
 
+To authenticate via proxy use `curl` as follows:
+
+    curl --proxy-user user:password -x 192.168.56.101:3128 http://example.com/
+
 ## Aliases
 
 You can use some useful commands to manage `squid3`:
