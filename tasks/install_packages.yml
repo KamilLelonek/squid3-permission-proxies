@@ -1,0 +1,10 @@
+---
+- name: update ubuntu
+  apt:  update_cache=yes
+
+- name: instal packages
+  apt:  name={{ item }} state=present
+  with_items:
+    - curl
+    - squid3
+    - apache2-utils

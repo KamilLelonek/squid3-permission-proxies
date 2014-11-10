@@ -1,0 +1,14 @@
+---
+- hosts:        '{{ host }}'
+  gather_facts: no
+  sudo:         yes
+  vars:
+    host:            squid
+    line_proxy_path: ''
+    hierarchy_name:  'squid'
+  tasks:
+    - include: ../tasks/stop_squid.yml
+    - include: ../tasks/copy_config_file.yml
+    - include: ../tasks/insert_proxy_path.yml
+    - include: ../tasks/clear_cache_and_logs.yml
+    - include: ../tasks/start_squid.yml

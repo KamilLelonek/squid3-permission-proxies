@@ -1,0 +1,4 @@
+---
+- name: make curl request
+  sudo: false
+  local_action: command curl --proxy-user user:password -x {{ proxy_ip }}:3128 http://www.deepsloweasy.com/

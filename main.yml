@@ -1,0 +1,19 @@
+---
+- hosts:        all
+  gather_facts: no
+  sudo:         yes
+  vars_files:
+    - vars/credentials.yml
+  tasks:
+    - name: add ssh keys
+      authorized_key:
+        user: vagrant
+        key:  "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+
+    - include: tasks/install_packages.yml
+    - include: tasks/copy_config_file.yml
+    - include: tasks/create_user_with_password.yml
+    - include: tasks/start_squid.yml
+
+    - name: copy aliases
+      copy: src=files/.bash_aliases dest=/home/vagrant/.bash_aliases

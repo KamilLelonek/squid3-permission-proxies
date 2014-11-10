@@ -1,0 +1,8 @@
+---
+- hosts:        all
+  gather_facts: no
+  sudo:         yes
+  tasks:
+    - include: ../tasks/stop_squid.yml
+    - include: ../tasks/clear_cache_and_logs.yml
+    - include: ../tasks/start_squid.yml
