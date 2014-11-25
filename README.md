@@ -73,3 +73,7 @@ That won't delete downloaded Ubuntu image. Another useful commands are:
 - http://tecadmin.net/configure-squid-proxy-server-mac-address-based-filtering/
 - http://www.deckle.co.uk/squid-users-guide/squid-access-control-and-access-control-operators.html
 - http://wiki.squid-cache.org/SquidFaq/SquidAcl
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/KamilLelonek/squid3-permission-proxies/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
